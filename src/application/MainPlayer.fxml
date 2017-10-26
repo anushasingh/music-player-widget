@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="288.0" prefWidth="354.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainPlayerController">
+   <children>
+      <ImageView fitHeight="295.0" fitWidth="379.0" layoutX="-11.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/aa.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="speaker" fitHeight="102.0" fitWidth="103.0" layoutX="22.0" layoutY="150.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/speakerstop.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="speaker2" fitHeight="102.0" fitWidth="109.0" layoutX="228.0" layoutY="150.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/speakerstop.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bars" fitHeight="31.0" fitWidth="88.0" layoutX="134.0" layoutY="119.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Desktop/barsstop.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c4c6cb" height="19.0" layoutX="169.0" layoutY="94.0" stroke="TRANSPARENT" strokeType="INSIDE" width="149.0" />
+      <ImageView fx:id="openi" fitHeight="20.0" fitWidth="19.0" layoutX="265.0" layoutY="96.0" onMouseClicked="#chooseFile" opacity="0.49" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/file.png" />
+         </image>
+         <effect>
+            <Glow level="0.0" />
+         </effect>
+      </ImageView>
+      <ImageView fx:id="closei" fitHeight="18.0" fitWidth="25.0" layoutX="301.0" layoutY="94.0" onMouseClicked="#closeButtonAction" opacity="0.49" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/close2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="stopi" fitHeight="18.0" fitWidth="19.0" layoutX="229.0" layoutY="94.0" onMouseClicked="#stopFile" opacity="0.49" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/stop2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="playi" fitHeight="17.0" fitWidth="25.0" layoutX="199.0" layoutY="95.0" onMouseClicked="#playpause" opacity="0.45" pickOnBounds="true" preserveRatio="true">
+         <effect>
+            <Glow level="0.0" />
+         </effect>
+         <image>
+            <Image url="@../images/play2.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="dummy" layoutX="22.0" layoutY="113.0" mnemonicParsing="false" opacity="0.0" text="Button" />
+   </children>
+</AnchorPane>
