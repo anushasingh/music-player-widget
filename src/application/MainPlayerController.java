@@ -1,6 +1,9 @@
 package application;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -84,17 +87,27 @@ public class MainPlayerController implements Initializable {
                 player.play();   
             }
             fileinuse = true;
-            File file = new File("src/images/dd.gif");
-             Image image = new Image(file.toURI().toString());
-            speaker.setImage(image);
-            speaker2.setImage(image);
-            File file2 = new File("src/images/ee.gif");
-            Image image2 = new Image(file2.toURI().toString());
-           bars.setImage(image2);
-           
-         
-            
-            
+       //  File file = new File("src/images/dd.gif");
+        //     Image image = new Image(file.toURI().toString());
+            speaker.setImage(new Image("/images/dd.gif"));
+            speaker2.setImage(new Image("/images/dd.gif"));
+         //   File file2 = new File("src/images/ee.gif");
+           // Image image2 = new Image(file2.toURI().toString());
+           bars.setImage(new Image("/images/ee.gif"));
+//            Image image = new Image(getClass().getResourceAsStream("/src/images/dd.gif"));
+//            speaker.setImage(image);
+//          //  String path = file.getAbsolutePath();
+//            bars.setImage(new Image(getClass().getResourceAsStream("src/images/ee.gif")));
+//            
+//            
+//            
+//            try {
+//                InputStream inputStream = new FileInputStream(path);
+//                Image image2 = new Image(inputStream);
+//               speaker.setImage(image2);
+//            } catch (FileNotFoundException ex) {
+//               // Logger.getLogger(JavaFXPixel.class.getName()).log(Level.SEVERE, null, ex);
+//            }
             
             flag=true;
             
@@ -104,15 +117,15 @@ public class MainPlayerController implements Initializable {
             player.pause();
             flag=false;
             speaker.setImage(null);
-            File file = new File("src/images/speakerstop.png");
-            Image image = new Image(file.toURI().toString());
+         //   File file = new File("src/images/speakerstop.png");
+       //     Image image = new Image(file.toURI().toString());
       
-            speaker.setImage(image);
-            speaker2.setImage(image);
+            speaker.setImage(new Image("/images/speakerstop.png"));
+            speaker2.setImage(new Image("/images/speakerstop.png"));
             
-            File file2 = new File("src/images/barsstop.png");
-            Image image2 = new Image(file2.toURI().toString());
-           bars.setImage(image2);
+        //    File file2 = new File("src/images/barsstop.png");
+       //     Image image2 = new Image(file2.toURI().toString());
+           bars.setImage(new Image("/images/barsstop.png"));
            
          
            
@@ -122,17 +135,17 @@ public class MainPlayerController implements Initializable {
     public void stopFile(){
             player.stop();
             flag=false;
-            File file = new File("src/images/speakerstop.png");
-            Image image = new Image(file.toURI().toString());
+          //  File file = new File("src/images/speakerstop.png");
+          //  Image image = new Image(file.toURI().toString());
       
-            speaker.setImage(image);
-            speaker2.setImage(image);
-            File file2 = new File("src/images/barsstop.png");
-            Image image2 = new Image(file2.toURI().toString());
-           bars.setImage(image2);
-           File file3 = new File("src/images/play2.png");
-           Image image3 = new Image(file3.toURI().toString());
-         playi.setImage(image3);
+            speaker.setImage(new Image("/images/speakerstop.png"));
+            speaker2.setImage(new Image("/images/speakerstop.png"));
+        //    File file2 = new File("src/images/barsstop.png");
+        //    Image image2 = new Image(file2.toURI().toString());
+           bars.setImage(new Image("/images/barsstop.png"));
+       //    File file3 = new File("src/images/play2.png");
+       //    Image image3 = new Image(file3.toURI().toString());
+         playi.setImage(new Image("/images/play2.png"));
     }
 public void playpause()
 {
@@ -142,14 +155,14 @@ public void playpause()
 		
 		  File file4 = new File("src/images/play2.png");
           Image image4 = new Image(file4.toURI().toString());
-        playi.setImage(image4);
+        playi.setImage(new Image("/images/play2.png"));
 	}
 	else
 	{
 		this.playFile();
 		  File file3 = new File("src/images/pause.png");
           Image image3 = new Image(file3.toURI().toString());
-        playi.setImage(image3);
+        playi.setImage(new Image("/images/pause.png"));
 	}
 }
     
